@@ -1,0 +1,16 @@
+<h2>Ajouter une course</h2>
+<form formGroup="raceForm" (ngSubmit)="onSubmit()">
+  <label>location</label>
+  <input type="text" id="location" name="location" formControlName="location" />
+
+  <label>Date</label>
+  <input type="date" id="date" formControlName="date" name="date" />
+
+  <span>Ponies</span>
+  <label *ngFor="let p of getPonies().controls; let i = index">
+    <input type="checkbox" id="ponies" name="ponies" formControlName="ponies[i]"/>
+  </label>
+  <button type="submit">Enregistrer</button>
+</form>
+
+

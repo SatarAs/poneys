@@ -1,0 +1,19 @@
+<h2> Liste des poneys</h2>
+<p-table [value]="ponies" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Id</th>
+      <th>Nom</th>
+      <th>Couleur</th>
+      <th>Age</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-pony>
+    <tr>
+      <td>{{pony.id}}</td>
+      <td>{{pony.name}}</td>
+      <td>{{pony.color}}</td>
+      <td>{{pony.age}}</td>
+    </tr>
+  </ng-template>
+</p-table>

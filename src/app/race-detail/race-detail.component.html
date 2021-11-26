@@ -1,0 +1,6 @@
+Indice = {{race.id_race}} - {{race.location | nameRace }} - le {{ race.date | date : "dd/MM/yyyy" }}
+<ul>
+  <li *ngFor="let p of race.ponies; let i = index">
+    Indice = {{i}} - {{p.name}} {{p.color}} {{p.age}}
+  </li>
+</ul>
